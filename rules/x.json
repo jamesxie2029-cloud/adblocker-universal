@@ -1,0 +1,33 @@
+[
+  {
+    "id": 6001,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "x.com",
+        "www.x.com",
+        "twitter.com",
+        "www.twitter.com",
+        "mobile.twitter.com"
+      ],
+      "excludedResourceTypes": [
+        "main_frame"
+      ],
+      "domainType": "thirdParty",
+      "requestDomains": [
+        "doubleclick.net",
+        "googleadservices.com",
+        "googlesyndication.com",
+        "amazon-adsystem.com",
+        "adnxs.com",
+        "pubmatic.com",
+        "rubiconproject.com",
+        "openx.net",
+        "adsrvr.org"
+      ]
+    }
+  }
+]

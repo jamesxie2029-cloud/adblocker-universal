@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>adblocker-universal</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="src/shared.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body><main>
+  <header><span class="logo" aria-hidden="true">A</span><div><p>A LITTLE LESS DISTRACTION</p><h1>adblocker-universal</h1></div><small id="version">0.2.0</small></header>
+  <label class="power"><span>Ad blocking</span><input id="enabled" type="checkbox" role="switch" disabled></label>
+  <section class="status" aria-live="polite" aria-atomic="true">
+    <h2 id="status-title">Connecting…</h2><p id="status-detail">Checking this tab.</p>
+    <div><span id="count-label">Ad elements hidden</span><strong id="removed-fields">—</strong></div>
+    <small id="count-detail">This page only; not a count of individual ads.</small>
+  </section>
+  <fieldset class="sites"><legend>Where to block</legend>
+    <label><span>YouTube<small>Removes recognized video ad placements, blocks known ad requests, and hides sponsored cards.</small></span><input id="siteYouTube" type="checkbox" role="switch" disabled></label>
+    <label><span>Reddit<small>Hides marked promoted posts and blocks known ad requests.</small></span><input id="siteReddit" type="checkbox" role="switch" disabled></label>
+    <label><span>Twitch<small>Hides display ads and blocks known ad requests. Stream ads are not covered.</small></span><input id="siteTwitch" type="checkbox" role="switch" disabled></label>
+    <label><span>Facebook<small>Hides recognized Sponsored posts and blocks known ad requests. Experimental.</small></span><input id="siteFacebook" type="checkbox" role="switch" disabled></label>
+    <label><span>Instagram<small>Hides posts with recognized Sponsored headers and blocks known ad requests. Experimental; Reels and Stories are not covered.</small></span><input id="siteInstagram" type="checkbox" role="switch" disabled></label>
+    <label><span>X<small>Hides marked promoted posts and blocks known ad requests.</small></span><input id="siteX" type="checkbox" role="switch" disabled></label>
+  </fieldset>
+  <details class="settings"><summary>Blocking options</summary>
+  <fieldset class="features"><legend class="visually-hidden">What to block</legend>
+    <label class="option"><input id="hideSponsored" type="checkbox" disabled><span>Hide sponsored posts and banners<small>Recognized ads on supported sites</small></span></label>
+    <label class="option"><input id="filterVideoAds" type="checkbox" disabled><span>Filter YouTube video ads<small>Remove ad placements before playback</small></span></label>
+    <label class="option"><input id="blockRequests" type="checkbox" disabled><span>Block known ad requests<small>On the sites enabled above</small></span></label>
+  </fieldset></details>
+  <p id="error" role="alert" hidden></p>
+  <button id="refresh" disabled>Refresh this tab</button>
+  <footer>Refresh after installing or changing video filtering. Twitch stream ads and other unsupported formats may still appear. No automatic skipping. Runs locally; no tracking.</footer>
+</main></body></html>

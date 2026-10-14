@@ -1,0 +1,9 @@
+node_modules/
+dist/
+_metadata/
+.DS_Store
+.env
+.env.*
+*.log
+*.crx
+*.pem

@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1001,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "www.youtube.com",
+        "youtube.com",
+        "m.youtube.com",
+        "www.youtube-nocookie.com"
+      ],
+      "excludedResourceTypes": [
+        "main_frame"
+      ],
+      "domainType": "thirdParty",
+      "requestDomains": [
+        "doubleclick.net",
+        "googleadservices.com",
+        "googlesyndication.com",
+        "amazon-adsystem.com",
+        "adnxs.com",
+        "pubmatic.com",
+        "rubiconproject.com",
+        "openx.net",
+        "adsrvr.org"
+      ],
+      "excludedInitiatorDomains": [
+        "music.youtube.com",
+        "studio.youtube.com",
+        "kids.youtube.com"
+      ]
+    }
+  },
+  {
+    "id": 1002,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "www.youtube.com",
+        "youtube.com",
+        "m.youtube.com",
+        "www.youtube-nocookie.com"
+      ],
+      "excludedResourceTypes": [
+        "main_frame"
+      ],
+      "excludedInitiatorDomains": [
+        "music.youtube.com",
+        "studio.youtube.com",
+        "kids.youtube.com"
+      ],
+      "urlFilter": "||youtube.com/pagead/"
+    }
+  }
+]

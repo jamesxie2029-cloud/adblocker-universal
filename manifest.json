@@ -1,0 +1,124 @@
+{
+  "manifest_version": 3,
+  "name": "adblocker-universal",
+  "version": "0.2.0",
+  "description": "Local ad-request blocking and sponsored-card filters for YouTube, Reddit, Twitch, Facebook, Instagram and X. Coverage varies by site.",
+  "minimum_chrome_version": "119",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://m.youtube.com/*",
+    "https://www.youtube-nocookie.com/*",
+    "https://reddit.com/*",
+    "https://www.reddit.com/*",
+    "https://old.reddit.com/*",
+    "https://sh.reddit.com/*",
+    "https://twitch.tv/*",
+    "https://www.twitch.tv/*",
+    "https://m.twitch.tv/*",
+    "https://player.twitch.tv/*",
+    "https://clips.twitch.tv/*",
+    "https://facebook.com/*",
+    "https://www.facebook.com/*",
+    "https://m.facebook.com/*",
+    "https://instagram.com/*",
+    "https://www.instagram.com/*",
+    "https://x.com/*",
+    "https://www.x.com/*",
+    "https://twitter.com/*",
+    "https://www.twitter.com/*",
+    "https://mobile.twitter.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*",
+        "https://www.youtube-nocookie.com/*"
+      ],
+      "js": [
+        "src/shared.js",
+        "src/content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://reddit.com/*",
+        "https://www.reddit.com/*",
+        "https://old.reddit.com/*",
+        "https://sh.reddit.com/*",
+        "https://twitch.tv/*",
+        "https://www.twitch.tv/*",
+        "https://m.twitch.tv/*",
+        "https://player.twitch.tv/*",
+        "https://clips.twitch.tv/*",
+        "https://facebook.com/*",
+        "https://www.facebook.com/*",
+        "https://m.facebook.com/*",
+        "https://instagram.com/*",
+        "https://www.instagram.com/*",
+        "https://x.com/*",
+        "https://www.x.com/*",
+        "https://twitter.com/*",
+        "https://www.twitter.com/*",
+        "https://mobile.twitter.com/*"
+      ],
+      "js": [
+        "src/shared.js",
+        "src/sites.js",
+        "src/site-content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "youtube_ads",
+        "enabled": true,
+        "path": "rules/youtube.json"
+      },
+      {
+        "id": "reddit_ads",
+        "enabled": true,
+        "path": "rules/reddit.json"
+      },
+      {
+        "id": "twitch_ads",
+        "enabled": true,
+        "path": "rules/twitch.json"
+      },
+      {
+        "id": "facebook_ads",
+        "enabled": true,
+        "path": "rules/facebook.json"
+      },
+      {
+        "id": "instagram_ads",
+        "enabled": true,
+        "path": "rules/instagram.json"
+      },
+      {
+        "id": "x_ads",
+        "enabled": true,
+        "path": "rules/x.json"
+      }
+    ]
+  },
+  "action": {
+    "default_title": "adblocker-universal",
+    "default_popup": "popup.html"
+  }
+}

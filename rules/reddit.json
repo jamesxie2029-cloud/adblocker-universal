@@ -1,0 +1,32 @@
+[
+  {
+    "id": 2001,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "reddit.com",
+        "www.reddit.com",
+        "old.reddit.com",
+        "sh.reddit.com"
+      ],
+      "excludedResourceTypes": [
+        "main_frame"
+      ],
+      "domainType": "thirdParty",
+      "requestDomains": [
+        "doubleclick.net",
+        "googleadservices.com",
+        "googlesyndication.com",
+        "amazon-adsystem.com",
+        "adnxs.com",
+        "pubmatic.com",
+        "rubiconproject.com",
+        "openx.net",
+        "adsrvr.org"
+      ]
+    }
+  }
+]

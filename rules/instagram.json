@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5001,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "initiatorDomains": [
+        "instagram.com",
+        "www.instagram.com"
+      ],
+      "excludedResourceTypes": [
+        "main_frame"
+      ],
+      "domainType": "thirdParty",
+      "requestDomains": [
+        "doubleclick.net",
+        "googleadservices.com",
+        "googlesyndication.com",
+        "amazon-adsystem.com",
+        "adnxs.com",
+        "pubmatic.com",
+        "rubiconproject.com",
+        "openx.net",
+        "adsrvr.org"
+      ]
+    }
+  }
+]

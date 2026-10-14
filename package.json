@@ -1,0 +1,16 @@
+{
+  "name": "adblocker-universal",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Scoped multi-site Chrome ad blocker with local rules and per-site controls.",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.12"
+  },
+  "packageManager": "pnpm@11.25.0"
+}
